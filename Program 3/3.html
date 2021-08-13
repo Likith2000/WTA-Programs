@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    document.write("<div style='text-align: center;'><p>Likith S 1BY18CS081</p></div>");
+    document.write("<div style='margin-top: 15%;text-align: center;'><p id='text'></p></div>");
+    var text = document.getElementById("text");
+    var size = 5;
+    var flag = 0;
+    function grow() {
+        text.innerHTML = "TEXT-GROWING";
+        text.style.color = "red";
+        size++;
+        text.style.fontSize = size;
+        if (size >= 70) flag = 1;
+    }
+    function shrink() {
+        text.innerHTML = "TEXT-SHRINKING";
+        text.style.color = "blue";
+        size--;
+        text.style.fontSize = size;
+        if (size <= 5) flag = 0;
+    }
+    function changeBackground(color) {
+        document.body.style.background = color;
+    }
+    setInterval(() => {
+        if (flag == 1) { shrink(); changeBackground("#ff0000"); }
+        else { grow(); changeBackground("#0000ff"); }
+    }, 100);
+</script>

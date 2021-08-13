@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <style>
+        button {
+            height: 30px;
+            width: 100px;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            text-align: justify;
+            background-color: #8be6f1;
+        }
+
+        button:hover {
+            background-color: #222222;
+            color: #d6d6d6;
+        }
+    </style>
+    <title>Calculator</title>
+    <script>
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a + b;
+            document.getElementById("answer").value = c;
+        }
+
+        function sub() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a - b;
+            document.getElementById("answer").value = c;
+        }
+
+        function mul() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a * b;
+            document.getElementById("answer").value = c;
+        }
+
+        function div() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a / b;
+            document.getElementById("answer").value = c;
+        }
+
+        function mod() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a % b;
+            document.getElementById("answer").value = c;
+        }
+
+        function exp() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = Math.pow(a, b);
+            document.getElementById("answer").value = c;
+        }
+
+    </script>
+</head>
+
+<body>
+    <p style="font-weight: 600;">1BY18CS081 - LIKITH S</p>
+    <h2>Calculator</h2>
+    First number : <input id="first" type="number"><br><br>
+    Second number: <input id="second" type="number"><br><br>
+    Choose Operation :<br><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    <button onclick="mod()">Modulus</button>
+    <button onclick="exp()">Exp1 ^ Exp2</button><br><br>
+    Result : <input id="answer">
+</body>
+
+</html>
